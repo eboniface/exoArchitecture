@@ -9,6 +9,6 @@ namespace ExoArchitecture
         int pointVie { get; }
         bool vivant { get; }
         int niveau { get; }
-
+        void Attaque(Personnage cible);
     }
 }

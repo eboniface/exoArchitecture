@@ -8,7 +8,11 @@ namespace ExoArchitecture
         {
             Console.WriteLine("Hello World!");
             Personnage personnages = new Personnage();
-            Console.WriteLine(personnages.niveau);
+            Personnage personnages2 = new Personnage();
+            Console.WriteLine(personnages2.pointVie);
+            personnages.Attaque(personnages2);
+            Console.WriteLine(personnages2.pointVie);
+            
         }
     }
 }

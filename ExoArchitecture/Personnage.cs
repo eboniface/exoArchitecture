@@ -22,5 +22,18 @@ namespace ExoArchitecture
         public bool vivant => _vivant;
         public int niveau => _niveau;
 
+        int IPersonnage.pointVie { get => _pointVie; }
+
+
+
+        private void setPV(int pv)
+        {
+            this._pointVie = pv;
+        }
+
+        public void Attaque(Personnage cible)
+        {
+            cible._pointVie = cible._pointVie - 10;
+        }
     }
 }
