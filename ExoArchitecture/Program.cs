@@ -11,9 +11,17 @@ namespace ExoArchitecture
             Personnage perso2 = new Personnage();
 
             perso1.Attaque(perso2);
-
+            perso1.Attaque(perso2);
+            perso1.Attaque(perso2);
+            perso1.Attaque(perso2);
+            perso1.Attaque(perso2);
             perso1.Soin(perso2);
-
+            perso1.Attaque(perso2);
+            perso1.Attaque(perso2);
+            perso1.Attaque(perso2);
+            perso1.Attaque(perso2);
+            perso1.Attaque(perso2);
+            perso1.Attaque(perso2);
         }
     }
 }

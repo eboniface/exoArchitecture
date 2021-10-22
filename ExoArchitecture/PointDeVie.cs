@@ -22,6 +22,7 @@ namespace ExoArchitecture
             {
                 _Pv = _Pv - 100;
             }
+            Console.WriteLine("A perdue es point de vie ");
         }
         public void checkVie()
         {
@@ -34,6 +35,7 @@ namespace ExoArchitecture
             {
                 _Pv = _Pv + 100;
             }
+            Console.WriteLine("A gagné des point de vie ");
         }
         public void isMort(Vivant vivant)
         {

@@ -19,6 +19,7 @@ namespace ExoArchitecture
         public void checkISmort()
         {
             Mort();
+            Console.WriteLine("est mort");
         }
     }
 }
