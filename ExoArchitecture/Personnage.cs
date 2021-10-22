@@ -31,9 +31,29 @@ namespace ExoArchitecture
             this._pointVie = pv;
         }
 
-        public void Attaque(Personnage cible)
+        public void Attaque(Personnage cible, int degat)
         {
-            cible._pointVie = cible._pointVie - 10;
+            if(cible._pointVie - degat <= 0)
+            {
+                cible._vivant = false;
+                cible._pointVie = 0;
+            }else
+            {
+                cible._pointVie = cible._pointVie - degat;
+            }
+           
+        }
+        public void Soin(Personnage cible, int soin)
+        {
+            if (cible._pointVie + soin> 1000)
+            {
+                cible._pointVie = 1000;
+            }
+            else
+            {
+                cible._pointVie = cible._pointVie + soin
+            }
+            
         }
     }
 }
