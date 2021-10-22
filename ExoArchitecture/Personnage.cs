@@ -31,9 +31,5 @@ namespace ExoArchitecture
         {
             _pointDeVieEtVivant.ReçoisDuSoin();
         }
-        public int test()
-        {
-            return _pointDeVieEtVivant.test();
-        }
     }
 }

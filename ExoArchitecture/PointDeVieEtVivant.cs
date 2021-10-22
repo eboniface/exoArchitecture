@@ -23,10 +23,5 @@ namespace ExoArchitecture
         {
             _pointDeVie.checkVie();
         }
-        public int test()
-        {
-            return _pointDeVie.test();
-        }
-
     }
 }

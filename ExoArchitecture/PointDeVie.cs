@@ -42,9 +42,5 @@ namespace ExoArchitecture
                 vivant.checkISmort();
             }
         }
-        public int test()
-        {
-            return _Pv;
-        }
     }
 }
