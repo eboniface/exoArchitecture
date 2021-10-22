@@ -7,29 +7,33 @@ namespace ExoArchitecture
     class Personnage
     {
         private Niveau _niveau;
-        private PointDeVie _pointDeVie;
+        private PointDeVieEtVivant _pointDeVieEtVivant;
 
         public Personnage()
         {
             _niveau = new Niveau();
-            _pointDeVie = new PointDeVie();
+            _pointDeVieEtVivant = new PointDeVieEtVivant();
         }
 
-        public void Attaque(int degat)
+        public void Attaque(Personnage perso)
         {
-            if (!_pointDeVie.check(degat))
-            {
-                _pointDeVie.Mort();
-            }
-            if (_pointDeVie.check(degat))
-            {
-                _pointDeVie.RecoisAttaque(degat);
-            }
+            perso.ReçoisAttaque();
         }
-        public void Soin(int soin)
+        public void Soin(Personnage perso)
         {
-                _pointDeVie.checkVie(soin);
-           
+            perso.ReçoiSoin();
+        }
+        public void ReçoisAttaque()
+        {
+            _pointDeVieEtVivant.PrendDesDegat();
+        }
+        public void ReçoiSoin()
+        {
+            _pointDeVieEtVivant.ReçoisDuSoin();
+        }
+        public int test()
+        {
+            return _pointDeVieEtVivant.test();
         }
     }
 }

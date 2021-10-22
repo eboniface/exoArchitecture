@@ -12,9 +12,13 @@ namespace ExoArchitecture
         {
             _vivant = true;
         }
-        public void Mort()
+        private void Mort()
         {
             _vivant = false;
+        }
+        public void checkISmort()
+        {
+            Mort();
         }
     }
 }

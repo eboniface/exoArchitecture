@@ -6,40 +6,45 @@ namespace ExoArchitecture
 {
     class PointDeVie
     {
-        private int _value;
-        private Vivant _vivant;
-
+        private int _Pv;
         public PointDeVie()
         {
-            _value = 1000;
+            _Pv = 1000;
         }
-        public void RecoisAttaque(int degat)
+
+        public void check()
         {
-            _value = _value - degat;
-        }
-        public bool check(int degat)
-        {
-            if (_value - degat <= 0)
+            if (_Pv - 100 <= 0)
             {
-                return false;
+                _Pv = 0;
             }
-            return true;
-        }
-        public void Mort()
-        {
-            _value = 0;
-            _vivant.Mort();
-        }
-        public void checkVie(int soin)
-        {
-            if(_value+soin > 1000)
+            if (_Pv - 100 > 0)
             {
-                _value = 1000;
+                _Pv = _Pv - 100;
             }
-            if(_value+soin< 1000)
+        }
+        public void checkVie()
+        {
+
+            if (_Pv + 100 >= 1000)
             {
-                _value = _value + soin;
+                _Pv = 1000;
             }
+            if (_Pv + 100 < 1000)
+            {
+                _Pv = _Pv + 100;
+            }
+        }
+        public void isMort(Vivant vivant)
+        {
+            if (_Pv ==0)
+            {
+                vivant.checkISmort();
+            }
+        }
+        public int test()
+        {
+            return _Pv;
         }
     }
 }
