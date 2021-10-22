@@ -6,13 +6,30 @@ namespace ExoArchitecture
 {
     class Personnage
     {
-        private NiveauEtVivant _niveauEtVivant;
+        private Niveau _niveau;
         private PointDeVie _pointDeVie;
 
         public Personnage()
         {
-            _niveauEtVivant = new NiveauEtVivant();
+            _niveau = new Niveau();
             _pointDeVie = new PointDeVie();
+        }
+
+        public void Attaque(int degat)
+        {
+            if (!_pointDeVie.check(degat))
+            {
+                _pointDeVie.Mort();
+            }
+            if (_pointDeVie.check(degat))
+            {
+                _pointDeVie.RecoisAttaque(degat);
+            }
+        }
+        public void Soin(int soin)
+        {
+                _pointDeVie.checkVie(soin);
+           
         }
     }
 }

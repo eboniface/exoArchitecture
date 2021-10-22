@@ -12,5 +12,9 @@ namespace ExoArchitecture
         {
             _vivant = true;
         }
+        public void Mort()
+        {
+            _vivant = false;
+        }
     }
 }

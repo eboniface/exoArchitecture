@@ -30,5 +30,16 @@ namespace ExoArchitecture
             _value = 0;
             _vivant.Mort();
         }
+        public void checkVie(int soin)
+        {
+            if(_value+soin > 1000)
+            {
+                _value = 1000;
+            }
+            if(_value+soin< 1000)
+            {
+                _value = _value + soin;
+            }
+        }
     }
 }
