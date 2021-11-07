@@ -39,7 +39,7 @@ namespace ExoArchitecture
         }
         public void isMort(Vivant vivant)
         {
-            if (_Pv ==0)
+            if (_Pv <=0)
             {
                 vivant.checkISmort();
             }
