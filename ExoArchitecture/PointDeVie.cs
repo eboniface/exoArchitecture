@@ -22,7 +22,7 @@ namespace ExoArchitecture
             {
                 _Pv = _Pv - 100;
             }
-            Console.WriteLine("A perdue es point de vie ");
+            Console.WriteLine("A perdue des point de vie ");
         }
         public void checkVie()
         {
